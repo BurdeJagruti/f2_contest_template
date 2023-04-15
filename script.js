@@ -1,4 +1,4 @@
-/** @format */
+
 
 let arr = [
   { id: 1, name: "john", age: "18", profession: "developer" },
@@ -7,21 +7,39 @@ let arr = [
 ];
 
 function PrintDeveloperbyMap() {
-  //Write your code here , just console.log
+
+arr.map((value)=>{
+  if(value.profession=="developer"){
+    console.log(value)
+  }
+})
 }
 
-function PrintDeveloperbyForEach() {
-  //Write your code here , just console.log
+function PrintDeveloperbyForEach() { 
+arr.forEach(function(value){
+  if(value.profession=="developer"){
+    console.log(value)
+  }
+})
 }
 
 function addData() {
-  //Write your code here, just console.log
+  let newobj={ id: 4, name: "johny", age: "28", profession: "Analyst" }
+  arr.push(newobj)
+  console.log(arr)
 }
 
 function removeAdmin() {
-  //Write your code here, just console.log
+  arr.filter((arr)=>{
+    if(arr.profession!="admin"){
+      console.log(arr)
+    }
+  })
 }
-
 function concatenateArray() {
-  //Write your code here, just console.log
+  let newArr=  [{ id: 5, name: "karen", age: "19", profession: "Software Engineer" },
+  { id: 6, name: "karen", age: "19", profession: "Software Engineer" },
+  { id: 7, name: "karen", age: "19", profession: "admin" }
+]
+  console.log(arr.concat(newArr))
 }
